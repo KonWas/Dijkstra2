@@ -62,7 +62,9 @@ public class GUI extends Application {
         Button resetButton = new Button("Reset");
         Button redrawButton = new Button("Redraw");
         Button drawRNGButton = new Button("Draw RNG");
+        Button redrawRNGButton = new Button("Redraw RNG");
         Button drawGGButton = new Button("Draw GG");
+        Button redrawGGButton = new Button("Redraw GG");
 
         gridPane.add(numVerticesLabel, 0, 0);
         gridPane.add(numVerticesField, 1, 0);
@@ -82,7 +84,7 @@ public class GUI extends Application {
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(10));
         layout.setAlignment(Pos.TOP_CENTER);
-        layout.getChildren().addAll(gridPane, generateButton, resetButton, redrawButton, drawRNGButton, drawGGButton, canvas);
+        layout.getChildren().addAll(gridPane, generateButton, redrawButton, drawRNGButton, redrawRNGButton, drawGGButton, redrawGGButton, canvas);
 
         ScrollPane scrollPane = new ScrollPane(layout);
         scrollPane.setFitToWidth(true);
@@ -127,10 +129,7 @@ public class GUI extends Application {
                     System.out.println("Invalid vertex values");
                     return;
                 }
-
-                dijkstraAlgorithm.setStartVertex(startVertex);
-                dijkstraAlgorithm.setEndVertex(endVertex);
-                dijkstraAlgorithm.getShortestPath(dijkstraAlgorithm.runDijkstraAlgorithm(dijkstraAlgorithm.getGraph(), dijkstraAlgorithm.getStartVertex()), dijkstraAlgorithm.getStartVertex(), dijkstraAlgorithm.getEndVertex(), dijkstraAlgorithm.getGraph()); // Compute the new shortest path
+                dijkstraAlgorithm = new Dijkstra(ng.getGraph(), startVertex, endVertex);
                 drawGraph(canvas);
             }
         });
@@ -142,8 +141,22 @@ public class GUI extends Application {
             rng = new RNG(numVertices);
             dijkstraAlgorithm = new Dijkstra(rng.getGraph(), startVertex, endVertex);
             drawRNG(canvas);
-//            System.out.println(dijkstraAlgorithm.getShortestPath(dijkstraAlgorithm.getDistances(), startVertex, endVertex, rng.getGraph()));
             rng.findAndDisplayCycles();
+        });
+
+        redrawRNGButton.setOnAction(e -> {
+            if (dijkstraAlgorithm != null) {
+                int numVertices = Integer.parseInt(numVerticesField.getText());
+                int startVertex = Integer.parseInt(startVertexField.getText());
+                int endVertex = Integer.parseInt(endVertexField.getText());
+
+                if (startVertex < 1 || startVertex > numVertices || endVertex < 1 || endVertex > numVertices) {
+                    System.out.println("Invalid vertex values");
+                    return;
+                }
+                dijkstraAlgorithm = new Dijkstra(rng.getGraph(), startVertex, endVertex);
+                drawRNG(canvas);
+            }
         });
 
         drawGGButton.setOnAction(e -> {
@@ -154,6 +167,21 @@ public class GUI extends Application {
             dijkstraAlgorithm = new Dijkstra(gg.getGraph(), startVertex, endVertex);
             drawGG(canvas);
             gg.findAndDisplayCycles();
+        });
+
+        redrawGGButton.setOnAction(e -> {
+            if (dijkstraAlgorithm != null) {
+                int numVertices = Integer.parseInt(numVerticesField.getText());
+                int startVertex = Integer.parseInt(startVertexField.getText());
+                int endVertex = Integer.parseInt(endVertexField.getText());
+
+                if (startVertex < 1 || startVertex > numVertices || endVertex < 1 || endVertex > numVertices) {
+                    System.out.println("Invalid vertex values");
+                    return;
+                }
+                dijkstraAlgorithm = new Dijkstra(gg.getGraph(), startVertex, endVertex);
+                drawGG(canvas);
+            }
         });
 
         Scene scene = new Scene(scrollPane);

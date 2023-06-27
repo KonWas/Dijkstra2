@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e799ecc-d253-46b6-9ae7-8615d5901b9e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dijkstra2/Dijkstra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dijkstra2/DijkstraUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dijkstra2/Edge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dijkstra2/GG.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dijkstra2/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dijkstra2/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dijkstra2/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dijkstra2/NormalGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dijkstra2/RNG.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dijkstra2/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dijkstra2/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dijkstra2/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +35,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "G:/_sem2_AiSD/Dijkstra2"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
